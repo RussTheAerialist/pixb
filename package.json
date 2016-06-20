@@ -1,6 +1,6 @@
 {
   "name": "pixb",
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "description": "A small web server that controls various effects on node-pixel strip",
   "main": "index.js",
   "scripts": {
