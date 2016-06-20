@@ -8,6 +8,18 @@ app.get('/blink-test', function(req, res) {
   res.send('OK');
 });
 
-app.listen(process.env.LISTEN_PORT, function() {
-  logic.setup(process.env.LED_PIN, process.env.LED_COUNT);
+app.get('/glitter', function(req, res) {
+  logic.glitter();
+  res.send('OK');
+})
+
+app.get('/', function(req,res) {
+  logic.stop();
+  res.send('OK');
+});
+
+logic.setup(process.env.LED_PIN, process.env.LED_COUNT).then(function() {
+  app.listen(process.env.LISTEN_PORT, function() {
+    console.log(`Bound to ${process.env.LED_PIN}/${process.env.LED_COUNT}\nListening on ${process.env.LISTEN_PORT}`);
+  });
 });
