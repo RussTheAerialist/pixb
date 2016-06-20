@@ -41,4 +41,3 @@ fabric.properties
 .gitignore
 .idea/
 node_modules/
-package.json
