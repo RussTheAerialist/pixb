@@ -11,6 +11,11 @@ app.get('/blink-test', function(req, res) {
 app.get('/glitter', function(req, res) {
   logic.glitter();
   res.send('OK');
+});
+
+app.get('/rainbow', function(req, res) {
+  logic.rainbow();
+  res.send('OK');
 })
 
 app.get('/', function(req,res) {
