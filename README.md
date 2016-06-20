@@ -24,3 +24,13 @@ reveal.js.
 * `/blink-test` - Blink all the leds on and off at 2hz
 * `/rainbow` - Rainbow across the leds
 * `/` - turn off effects
+
+### Cylinder Spiral Effect
+
+The `/rainbow` endpoint has a special mode that is enabled by adding
+`COLUMN_LENGTH` and `ROW_COUNT` to the `.env` file.  This will cause the
+leds to spiral down a cylinder.  This is a special case for a specific
+project I'm working on.
+
+*This hasn't been tested yet because I'm still developing the device*
+
