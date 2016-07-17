@@ -9,7 +9,12 @@ app.get('/blink-test', function(req, res) {
 });
 
 app.get('/glitter', function(req, res) {
-  logic.glitter();
+  logic.glitter('009900');
+  res.send('OK');
+});
+
+app.get('/glitter/:color', function(req, res) {
+  logic.glitter(req.params.color);
   res.send('OK');
 });
 
